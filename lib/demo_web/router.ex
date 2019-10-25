@@ -17,6 +17,9 @@ defmodule DemoWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    # Add this resource to your browser scope
+    resources "/todos", TodoController
   end
 
   # Other scopes may use custom stacks.
